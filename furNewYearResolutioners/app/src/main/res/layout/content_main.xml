@@ -24,9 +24,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/androidxx"
-            android:id="@+id/pushup"
+            android:id="@+id/pushupView"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
+            android:paddingLeft="10dp"
             />
 
         <ImageView
@@ -34,20 +35,42 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/androidxx"
-            android:id="@+id/situp"
+            android:id="@+id/situpView"
             android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:paddingRight="10dp"
+            />
+
+
+        <ImageView
+            android:contentDescription="@string/jogging"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/androidxx"
+            android:id="@+id/joggingView"
+            android:layout_below="@+id/pushupView"
+            android:layout_alignEnd="@+id/pushupView"
+            android:paddingTop="10dp"
+            />
+
+        <ImageView
+            android:contentDescription="@string/jumping_jacks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/androidxx"
+            android:id="@+id/jumping_jacksView"
+            android:layout_alignBottom="@id/joggingView"
+            android:layout_alignStart="@+id/situpView" />
 
 
     </RelativeLayout>
 
     <LinearLayout
+        android:id="@+id/entryLayout"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="92dp"
         android:layout_below="@+id/convertedLayout">
 
         <RadioButton
@@ -56,6 +79,123 @@
             android:text="New RadioButton"
             android:id="@+id/radioButton" />
     </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/entryLayout"
+        android:minHeight="30dp"
+        android:paddingBottom="70dp"
+        android:longClickable="true">
+
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/horizontalScrollView"
+            >
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/androidm"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="@string/pushup"
+                        android:id="@+id/pushupScroll"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/androidm"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="@string/situp"
+                        android:id="@+id/situpScroll"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/androidm"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="@string/jogging"
+                        android:id="@+id/joggingScroll"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/androidm"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="@string/jumping_jacks"
+                        android:id="@+id/jumping_jacksScroll"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+
+    </FrameLayout>
 
 
 </RelativeLayout>
