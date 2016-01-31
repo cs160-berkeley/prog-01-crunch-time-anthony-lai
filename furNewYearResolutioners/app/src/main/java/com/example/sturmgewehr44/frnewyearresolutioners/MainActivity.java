@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.HashMap;
@@ -37,10 +38,16 @@ public class MainActivity extends AppCompatActivity {
     public void changeExercise(View view) {
         System.out.println(view.getTag().toString());
         currentExercise = tagMapToExercise.get(view.getTag().toString());
+        LinearLayout sideways = (LinearLayout) ((LinearLayout) view.getParent()).getParent();
+        int children = sideways.getChildCount();
+        for (int i=0; i<children; i++) {
+            LinearLayout vertical = (LinearLayout) sideways.getChildAt(i);
+            vertical.getChildAt(0).setBackgroundColor(Color.RED);
+        }
         view.setBackgroundColor(Color.YELLOW);
         TextView ending = (TextView) findViewById(R.id.ending);
         System.out.println(ending.getText());
-        ending.setText("R.strings");
+        ending.setText((String) view.getTag());
         System.out.println(ending.getText());
     }
 
@@ -50,17 +57,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void addValuestoHashmap() {
-        tagMapToExercise.put("PUSHUP", Exercise.PUSHUP);
-        tagMapToExercise.put("SITUP", Exercise.SITUP);
-        tagMapToExercise.put("SQUATS", Exercise.SQUATS);
-        tagMapToExercise.put("LEGLIFT", Exercise.LEGLIFT);
-        tagMapToExercise.put("JUMPINGJACKS", Exercise.JUMPINGJACKS);
-        tagMapToExercise.put("PULLUP", Exercise.PULLUP);
-        tagMapToExercise.put("CYCLING", Exercise.CYCLING);
-        tagMapToExercise.put("WALKING", Exercise.WALKING);
-        tagMapToExercise.put("JOGGING", Exercise.JOGGING);
-        tagMapToExercise.put("SWIMMING", Exercise.SWIMMING);
-        tagMapToExercise.put("STAIRCLIMBING", Exercise.STAIRCLIMBING);
+        tagMapToExercise.put("pushup", Exercise.PUSHUP);
+        tagMapToExercise.put("situp", Exercise.SITUP);
+        tagMapToExercise.put("squats", Exercise.SQUATS);
+        tagMapToExercise.put("leg_lift", Exercise.LEGLIFT);
+        tagMapToExercise.put("plank", Exercise.JUMPINGJACKS);
+        tagMapToExercise.put("jumping_jacks", Exercise.PULLUP);
+        tagMapToExercise.put("cycling", Exercise.CYCLING);
+        tagMapToExercise.put("walking", Exercise.WALKING);
+        tagMapToExercise.put("jogging", Exercise.JOGGING);
+        tagMapToExercise.put("swimming", Exercise.SWIMMING);
+        tagMapToExercise.put("stair_climbing", Exercise.STAIRCLIMBING);
     }
 
     private Exercise currentExercise;

@@ -143,7 +143,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_below="@+id/editLayoutn"
+        android:layout_below="@+id/editLayout"
         android:longClickable="true">
 
 
@@ -170,7 +170,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/androidm"
-                        android:tag="PUSHUP"
+                        android:tag="@string/pushup"
                         android:onClick="changeExercise"
                         />
 
@@ -195,7 +195,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/androidm"
-                        android:tag="SITUP"
+                        android:tag="@string/situp"
                         android:onClick="changeExercise"
                         />
 
@@ -220,7 +220,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/androidm"
-                        android:tag="JOGGING"
+                        android:tag="@string/jogging"
                         android:onClick="changeExercise"
                         />
 
@@ -244,7 +244,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/androidm"
-                        android:tag="JUMPINGJACKS"
+                        android:tag="@string/jumping_jacks"
                         android:layout_gravity="center_horizontal"
                         android:onClick="changeExercise"
                         />
@@ -269,7 +269,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/androidm"
-                        android:tag="SQUATS"
+                        android:tag="@string/squats"
                         android:onClick="changeExercise"
                         />
 
