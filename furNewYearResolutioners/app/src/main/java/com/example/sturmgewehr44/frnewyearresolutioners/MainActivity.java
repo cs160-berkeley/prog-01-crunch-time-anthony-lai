@@ -7,14 +7,16 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.EditText;
-
 import java.util.HashMap;
+import android.text.Editable;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,53 +29,48 @@ public class MainActivity extends AppCompatActivity {
         currentExercise = Exercise.PUSHUP;
         tagMapToExercise = new HashMap<String, Exercise>();
         tagExerciseToReps = new HashMap<Exercise, Integer>();
+        tagExerciseToMetric = new HashMap<Exercise, String>();
+        amountBox = (EditText) findViewById(R.id.amount);
+        amountBox.addTextChangedListener(inputChanged);
         addValuestoHashmap();
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
     }
 
-//    protected void onResume(Bundle savedInstanceState) {
-//        while (true) {
-//            analyzeReps();
+//    protected void onStart(Bundle savedInstanceState) {
+//        unused1 = (HorizontalScrollView) findViewById(R.id.horizontalScrollView);
+//        sideways = (LinearLayout) unused1.getChildAt(0);
+//        children = sideways.getChildCount();
+//        for (int i=0; i<children; i++) {
+//            LinearLayout vertical = (LinearLayout) sideways.getChildAt(i);
+//            vertical.getChildAt(0).setBackgroundColor(Color.rgb(238, 238, 238));
 //        }
 //    }
 
     public void changeExercise(View view) {
         currentExercise = tagMapToExercise.get(view.getTag().toString());
         System.out.println(currentExercise);
-        LinearLayout sideways = (LinearLayout) ((LinearLayout) view.getParent()).getParent();
-        int children = sideways.getChildCount();
+        sideways = (LinearLayout) ((LinearLayout) view.getParent()).getParent();
+        children = sideways.getChildCount();
         for (int i=0; i<children; i++) {
             LinearLayout vertical = (LinearLayout) sideways.getChildAt(i);
-            vertical.getChildAt(0).setBackgroundColor(Color.RED);
+            vertical.getChildAt(0).setBackgroundColor(Color.rgb(238, 238, 238));
         }
         view.setBackgroundColor(Color.YELLOW);
         TextView ending = (TextView) findViewById(R.id.ending);
-        System.out.println(ending.getText());
         ending.setText((String) view.getTag());
-        System.out.println(ending.getText());
         analyzeReps();
     }
 
     private void analyzeReps() {
-        EditText amountBox = (EditText) findViewById(R.id.amount);
+        TextView minreps = (TextView) findViewById(R.id.RepMinutes);
+        minreps.setText(tagExerciseToMetric.get(currentExercise));
         if (TextUtils.isEmpty(amountBox.getText())) {
             return;
         }
         int amount = Integer.parseInt(amountBox.getText().toString());
-        System.out.println(amount);
-        System.out.println(currentExercise);
         Calories = amount * 100 / tagExerciseToReps.get(currentExercise);
-        System.out.println(Calories);
         TextView arbeit = (TextView) findViewById(R.id.arbeit);
         arbeit.setText(String.valueOf(Calories));
-//        //display calories
+
         //display in secondaries
     }
 
@@ -108,15 +105,49 @@ public class MainActivity extends AppCompatActivity {
         tagExerciseToReps.put(Exercise.JOGGING, 12);
         tagExerciseToReps.put(Exercise.SWIMMING, 13);
         tagExerciseToReps.put(Exercise.STAIRCLIMBING, 15);
+
+        tagExerciseToMetric.put(Exercise.PUSHUP, "reps");
+        tagExerciseToMetric.put(Exercise.SITUP, "reps");
+        tagExerciseToMetric.put(Exercise.SQUATS, "reps");
+        tagExerciseToMetric.put(Exercise.LEGLIFT, "minutes");
+        tagExerciseToMetric.put(Exercise.PLANK, "minutes");
+        tagExerciseToMetric.put(Exercise.JUMPINGJACKS, "minutes");
+        tagExerciseToMetric.put(Exercise.PULLUP, "reps");
+        tagExerciseToMetric.put(Exercise.CYCLING, "minutes");
+        tagExerciseToMetric.put(Exercise.WALKING, "minutes");
+        tagExerciseToMetric.put(Exercise.JOGGING, "minutes");
+        tagExerciseToMetric.put(Exercise.SWIMMING, "minutes");
+        tagExerciseToMetric.put(Exercise.STAIRCLIMBING, "minutes");
     }
+
+    private EditText amountBox;
+
+    private TextWatcher inputChanged = new TextWatcher() {
+        public void afterTextChanged(Editable s) {
+            analyzeReps();
+        }
+        public void beforeTextChanged(CharSequence s, int start, int count, int after){
+        }
+        public void onTextChanged(CharSequence s, int start, int before, int after) {
+
+        }
+    };
 
     private Exercise currentExercise;
 
     public int Calories;
 
+    private int children;
+
     private HashMap<String, Exercise> tagMapToExercise;
 
     private HashMap<Exercise, Integer> tagExerciseToReps;
+
+    private HashMap<Exercise, String> tagExerciseToMetric;
+
+    private HorizontalScrollView unused1;
+
+    private LinearLayout sideways;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

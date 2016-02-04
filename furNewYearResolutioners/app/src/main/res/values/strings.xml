@@ -18,4 +18,5 @@
     <string name="of">of</string>
     <string name="reps">reps</string>
     <string name="minutes">minutes</string>
+    <color name="grey">#EEEEEE</color>
 </resources>

@@ -182,10 +182,12 @@
 
         <HorizontalScrollView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
             android:id="@+id/horizontalScrollView"
+            android:background="@color/grey"
             >
 
             <LinearLayout
@@ -200,11 +202,15 @@
                     android:layout_height="match_parent">
 
                     <ImageButton
+                        android:tag="@string/pushup"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/androidm"
-                        android:tag="@string/pushup"
+                        android:src="@drawable/pullups"
                         android:onClick="changeExercise"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="100dp"
+                        android:maxWidth="100dp"
+                        android:scaleType="fitCenter"
                         />
 
                     <TextView
@@ -221,15 +227,18 @@
                     android:orientation="vertical"
                     android:layout_width="0px"
                     android:layout_weight="1"
-                    android:paddingBottom="10dp"
                     android:layout_height="match_parent">
 
                     <ImageButton
+                        android:tag="@string/situp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/androidm"
-                        android:tag="@string/situp"
+                        android:src="@drawable/pullups"
                         android:onClick="changeExercise"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="100dp"
+                        android:maxWidth="100dp"
+                        android:scaleType="fitCenter"
                         />
 
                     <TextView
@@ -250,11 +259,15 @@
                     android:layout_height="match_parent">
 
                     <ImageButton
+                        android:tag="@string/jogging"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/androidm"
-                        android:tag="@string/jogging"
+                        android:src="@drawable/pullups"
                         android:onClick="changeExercise"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="100dp"
+                        android:maxWidth="100dp"
+                        android:scaleType="fitCenter"
                         />
 
                     <TextView
@@ -274,12 +287,15 @@
                     android:layout_height="match_parent">
 
                     <ImageButton
+                        android:tag="@string/jumping_jacks"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/androidm"
-                        android:tag="@string/jumping_jacks"
-                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/pullups"
                         android:onClick="changeExercise"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="100dp"
+                        android:maxWidth="100dp"
+                        android:scaleType="fitCenter"
                         />
 
                     <TextView
@@ -299,11 +315,15 @@
                     android:layout_height="match_parent">
 
                     <ImageButton
+                        android:tag="@string/squats"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/androidm"
-                        android:tag="@string/squats"
+                        android:src="@drawable/pullups"
                         android:onClick="changeExercise"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="100dp"
+                        android:maxWidth="100dp"
+                        android:scaleType="fitCenter"
                         />
 
                     <TextView
