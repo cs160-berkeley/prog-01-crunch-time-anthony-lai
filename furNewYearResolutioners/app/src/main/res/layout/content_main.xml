@@ -15,9 +15,114 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/convertedLayout"
+        android:id="@+id/editLayout"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        >
+
+        <LinearLayout
+            android:id="@+id/entryLayout"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="I did"
+                android:tag="SUBJECT"
+                android:id="@+id/subject"
+
+                />
+
+            <EditText
+                android:layout_width="88dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:tag="NUMBER"
+                android:hint="@string/hintAmount"
+                android:gravity="center"
+                android:id="@+id/amount" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/reps"
+                android:tag="REPMINUTES"
+                android:paddingEnd="2dp"
+                android:id="@+id/RepMinutes" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/of"
+                android:tag="OF"
+                android:id="@+id/Of"
+                android:paddingRight="2dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/pushup"
+                android:tag="ENDING"
+                android:id="@+id/ending" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/calorylineLayout"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+
+            android:layout_below="@+id/entryLayout"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="That's equal to "
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="0"
+                android:tag="caloryCounter"
+                android:paddingEnd="2dp"
+                android:id="@+id/arbeit" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="calories! Or:"
+                android:paddingRight="2dp"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/convertedLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editLayout"
+        android:layout_alignParentStart="true"
+        >
 
         <ImageView
             android:contentDescription="@string/pushup"
@@ -40,7 +145,6 @@
             android:layout_alignParentEnd="true"
             android:paddingRight="10dp"
             />
-
 
         <ImageView
             android:contentDescription="@string/jogging"
@@ -65,85 +169,14 @@
 
     </RelativeLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editLayout"
-        android:layout_below="@+id/convertedLayout"
-        android:layout_alignParentStart="true">
 
-        <LinearLayout
-            android:id="@+id/entryLayout"
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="I did"
-                android:tag="SUBJECT"
-                android:id="@+id/subject"
-
-                />
-
-            <EditText
-                android:layout_width="88dp"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:tag="NUMBER"
-                android:hint="@string/hintAmount"
-                android:id="@+id/editText" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="@string/reps"
-                android:tag="REPMINUTES"
-                android:paddingEnd="2dp"
-
-                android:id="@+id/RepMinutes" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="@string/of"
-                android:tag="OF"
-                android:id="@+id/Of"
-                android:paddingRight="2dp"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="@string/pushup"
-                android:tag="ENDING"
-                android:id="@+id/ending" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="s"
-                android:tag="PLURAL"
-                android:id="@+id/plural" />
-        </LinearLayout>
-
-    </RelativeLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_below="@+id/editLayout"
+        android:layout_below="@+id/convertedLayout"
         android:longClickable="true">
 
 
@@ -285,6 +318,7 @@
 
 
             </LinearLayout>
+
         </HorizontalScrollView>
 
 
