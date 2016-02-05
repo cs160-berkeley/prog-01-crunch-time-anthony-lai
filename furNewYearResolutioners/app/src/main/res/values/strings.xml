@@ -1,11 +1,10 @@
 <resources>
     <string name="app_name">FürNewYearResolutioners</string>
     <string name="action_settings">Settings</string>
-    <string name="kapital">Ich Liebe Kapitalismus</string>
     <string name="pushup">Pushups</string>
     <string name="situp">Situps</string>
     <string name="squats">Squats</string>
-    <string name="leg_lift">Leg-lift</string>
+    <string name="leg_lift">Leg Lifts</string>
     <string name="plank">Planks</string>
     <string name="jumping_jacks">Jumping Jacks</string>
     <string name="pullup">Pullups</string>
@@ -13,7 +12,7 @@
     <string name="walking">Walking</string>
     <string name="jogging">Jogging</string>
     <string name="swimming">Swimming</string>
-    <string name="stair_climbing">Stair-Climbing</string>
+    <string name="stair_climbing">Stair Climbing</string>
     <string name="hintAmount">this many</string>
     <string name="of">of</string>
     <string name="reps">reps</string>

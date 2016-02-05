@@ -125,14 +125,14 @@ public class MainActivity extends AppCompatActivity {
         tagMapToExercise.put("Situps", Exercise.SITUP);
         tagMapToExercise.put("Squats", Exercise.SQUATS);
         tagMapToExercise.put("Leg Lifts", Exercise.LEGLIFT);
-        tagMapToExercise.put("Plank", Exercise.PLANK);
+        tagMapToExercise.put("Planks", Exercise.PLANK);
         tagMapToExercise.put("Jumping Jacks", Exercise.JUMPINGJACKS);
-        tagMapToExercise.put("Pullup", Exercise.PULLUP);
+        tagMapToExercise.put("Pullups", Exercise.PULLUP);
         tagMapToExercise.put("Cycling", Exercise.CYCLING);
         tagMapToExercise.put("Walking", Exercise.WALKING);
         tagMapToExercise.put("Jogging", Exercise.JOGGING);
         tagMapToExercise.put("Swimming", Exercise.SWIMMING);
-        tagMapToExercise.put("Stair_climbing", Exercise.STAIRCLIMBING);
+        tagMapToExercise.put("Stair Climbing", Exercise.STAIRCLIMBING);
 
         tagExerciseToReps.put(Exercise.PUSHUP, 350);
         tagExerciseToReps.put(Exercise.SITUP, 200);

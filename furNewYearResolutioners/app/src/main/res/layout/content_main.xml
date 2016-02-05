@@ -387,7 +387,7 @@
                         android:tag="@string/situp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/pullups"
+                        android:src="@drawable/situps"
                         android:onClick="changeExercise"
                         android:adjustViewBounds="true"
                         android:maxHeight="100dp"
@@ -416,7 +416,7 @@
                         android:tag="@string/jogging"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/pullups"
+                        android:src="@drawable/jogging"
                         android:onClick="changeExercise"
                         android:adjustViewBounds="true"
                         android:maxHeight="100dp"
@@ -444,7 +444,7 @@
                         android:tag="@string/jumping_jacks"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/pullups"
+                        android:src="@drawable/jumpingjacks"
                         android:onClick="changeExercise"
                         android:adjustViewBounds="true"
                         android:maxHeight="100dp"
@@ -472,7 +472,7 @@
                         android:tag="@string/squats"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/pullups"
+                        android:src="@drawable/squats"
                         android:onClick="changeExercise"
                         android:adjustViewBounds="true"
                         android:maxHeight="100dp"
@@ -485,6 +485,202 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="@string/squats"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:tag="@string/leg_lift"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/leglift"
+                        android:onClick="changeExercise"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="100dp"
+                        android:maxWidth="100dp"
+                        android:scaleType="fitCenter"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="@string/leg_lift"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:tag="@string/plank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/plank"
+                        android:onClick="changeExercise"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="100dp"
+                        android:maxWidth="100dp"
+                        android:scaleType="fitCenter"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="@string/plank"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:tag="@string/pullup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/pullups"
+                        android:onClick="changeExercise"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="100dp"
+                        android:maxWidth="100dp"
+                        android:scaleType="fitCenter"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="@string/pullup"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:tag="@string/cycling"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/cycling"
+                        android:onClick="changeExercise"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="100dp"
+                        android:maxWidth="100dp"
+                        android:scaleType="fitCenter"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="@string/cycling"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:tag="@string/walking"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/walking"
+                        android:onClick="changeExercise"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="100dp"
+                        android:maxWidth="100dp"
+                        android:scaleType="fitCenter"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="@string/walking"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:tag="@string/swimming"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/swimming"
+                        android:onClick="changeExercise"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="100dp"
+                        android:maxWidth="100dp"
+                        android:scaleType="fitCenter"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="@string/swimming"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:tag="@string/stair_climbing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/stairclimbing"
+                        android:onClick="changeExercise"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="100dp"
+                        android:maxWidth="100dp"
+                        android:scaleType="fitCenter"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="@string/stair_climbing"
                         android:layout_gravity="center_horizontal"
                         />
 
