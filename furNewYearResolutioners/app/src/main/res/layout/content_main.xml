@@ -27,6 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
+
             >
 
             <TextView
@@ -120,7 +121,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
-            android:id="@+id/pushupLayout">
+            android:id="@+id/pushupLayout"
+            android:paddingLeft="10dp">
 
             <ImageView
                 android:contentDescription="@string/pushup"
@@ -168,6 +170,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
+            android:paddingRight="10dp"
             android:id="@+id/situpLayout">
 
             <ImageView
@@ -216,7 +219,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/pushupLayout"
             android:layout_alignEnd="@+id/pushupLayout"
-            android:id="@+id/joggingLayout">
+            android:id="@+id/joggingLayout"
+            android:paddingLeft="10dp">
 
             <ImageView
                 android:contentDescription="@string/jogging"
@@ -245,13 +249,16 @@
                     android:text="@string/default0"
                     android:tag="caloryCounter"
                     android:paddingEnd="2dp"
+                    android:textSize="10dp"
                     android:id="@+id/arbeitJogging" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="10dp"
                     android:text="minutes of jogging"
+                    android:lines="1"
                     />
 
             </LinearLayout>
@@ -264,6 +271,7 @@
             android:layout_height="wrap_content"
             android:layout_alignBottom="@id/joggingLayout"
             android:layout_alignEnd="@+id/situpLayout"
+            android:paddingRight="10dp"
             android:id="@+id/jumping_jacksLayout">
 
             <ImageView
@@ -274,7 +282,7 @@
                 android:id="@+id/jumping_jacksView"
                 android:adjustViewBounds="true"
                 android:maxHeight="130dp"
-                android:maxWidth="150dp"
+                android:maxWidth="130dp"
                 android:scaleType="fitCenter"
                 android:layout_gravity="end"
                 />
@@ -293,6 +301,7 @@
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:text="@string/default0"
                     android:paddingEnd="2dp"
+                    android:textSize="10dp"
                     android:id="@+id/arbeitJumpingJacks" />
 
                 <TextView
@@ -300,6 +309,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:text="minutes of jumping jacks"
+                    android:textSize="10dp"
                     android:lines="1"
                     />
 

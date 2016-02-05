@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         tagExerciseToMetric = new HashMap<Exercise, String>();
         amountBox = (EditText) findViewById(R.id.amount);
         amountBox.addTextChangedListener(inputChanged);
+        amount = 0;
         addValuestoHashmap();
     }
 
@@ -66,22 +67,52 @@ public class MainActivity extends AppCompatActivity {
         if (TextUtils.isEmpty(amountBox.getText())) {
             return;
         }
-        int amount = Integer.parseInt(amountBox.getText().toString());
+        amount = 0;
+        try {
+            amount = Integer.parseInt(amountBox.getText().toString());
+            if (amount > Integer.MAX_VALUE / 100) {
+                amountBox.setText(String.valueOf(Integer.MAX_VALUE / 100));
+                amount = Integer.MAX_VALUE / 100;
+            }
+        } catch (Exception e) {
+            amountBox.setText(String.valueOf(Integer.MAX_VALUE / 100));
+            amount = Integer.MAX_VALUE / 100;
+        }
         Calories = amount * 100 / tagExerciseToReps.get(currentExercise);
+        displayInfo();
+    }
+
+    private void displayInfo() {
         TextView arbeit = (TextView) findViewById(R.id.arbeit);
         arbeit.setText(String.valueOf(Calories));
         TextView pushupArbeit = (TextView) findViewById(R.id.arbeitPushup);
         TextView situpArbeit = (TextView) findViewById(R.id.arbeitSitup);
         TextView joggingArbeit = (TextView) findViewById(R.id.arbeitJogging);
         TextView jjacksArbeit = (TextView) findViewById(R.id.arbeitJumpingJacks);
-        int pushValue = Calories * tagExerciseToReps.get(Exercise.PUSHUP) / 100;
-        int sitValue = Calories * tagExerciseToReps.get(Exercise.SITUP) / 100;
-        int jogValue = Calories * tagExerciseToReps.get(Exercise.JOGGING) / 100;
-        int jackValue = Calories * tagExerciseToReps.get(Exercise.JUMPINGJACKS) / 100;
-        pushupArbeit.setText(String.valueOf(pushValue));
-        situpArbeit.setText(String.valueOf(sitValue));
-        joggingArbeit.setText(String.valueOf(jogValue));
-        jjacksArbeit.setText(String.valueOf(jackValue));
+        if (currentExercise == Exercise.PUSHUP) {
+            pushupArbeit.setText(String.valueOf(amount));
+        } else {
+            int pushValue = (int) Calories * tagExerciseToReps.get(Exercise.PUSHUP) / 100;
+            pushupArbeit.setText(String.valueOf(pushValue));
+        }
+        if (currentExercise == Exercise.SITUP) {
+            situpArbeit.setText(String.valueOf(amount));
+        } else {
+            int sitValue = (int) Calories * tagExerciseToReps.get(Exercise.SITUP) / 100;
+            situpArbeit.setText(String.valueOf(sitValue));
+        }
+        if (currentExercise == Exercise.JOGGING) {
+            joggingArbeit.setText(String.valueOf(amount));
+        } else {
+            int jogValue = (int) Calories * tagExerciseToReps.get(Exercise.JOGGING) / 100;
+            joggingArbeit.setText(String.valueOf(jogValue));
+        }
+        if (currentExercise == Exercise.JUMPINGJACKS) {
+            jjacksArbeit.setText(String.valueOf(amount));
+        } else {
+            int jackValue = (int) Calories * tagExerciseToReps.get(Exercise.JUMPINGJACKS) / 100;
+            jjacksArbeit.setText(String.valueOf(jackValue));
+        }
     }
 
     private enum Exercise {
@@ -145,9 +176,11 @@ public class MainActivity extends AppCompatActivity {
 
     private Exercise currentExercise;
 
-    public int Calories;
+    public float Calories;
 
     private int children;
+
+    private int amount;
 
     private HashMap<String, Exercise> tagMapToExercise;
 
