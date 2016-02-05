@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/white"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.sturmgewehr44.frnewyearresolutioners.MainActivity"
     tools:showIn="@layout/activity_main">
@@ -39,7 +40,7 @@
                 />
 
             <EditText
-                android:layout_width="88dp"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:ems="10"
@@ -52,20 +53,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="@string/reps"
+                android:text="@string/empty"
                 android:tag="REPMINUTES"
                 android:paddingEnd="2dp"
                 android:id="@+id/RepMinutes" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="@string/of"
-                android:tag="OF"
-                android:id="@+id/Of"
-                android:paddingRight="2dp"
-                />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -109,7 +100,6 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="calories! Or:"
-                android:paddingRight="2dp"
                 />
 
         </LinearLayout>
@@ -124,47 +114,201 @@
         android:layout_alignParentStart="true"
         >
 
-        <ImageView
-            android:contentDescription="@string/pushup"
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/androidxx"
-            android:id="@+id/pushupView"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
-            android:paddingLeft="10dp"
-            />
+            android:id="@+id/pushupLayout">
 
-        <ImageView
-            android:contentDescription="@string/situp"
+            <ImageView
+                android:contentDescription="@string/pushup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pushups"
+                android:id="@+id/pushupView"
+                android:adjustViewBounds="true"
+                android:maxHeight="130dp"
+                android:maxWidth="130dp"
+                android:scaleType="fitCenter"
+                />
+
+            <LinearLayout
+                android:id="@+id/pushupLineLayout"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/default0"
+                    android:tag="caloryCounter"
+                    android:paddingEnd="2dp"
+                    android:id="@+id/arbeitPushup" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="pushups"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/androidxx"
-            android:id="@+id/situpView"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:paddingRight="10dp"
-            />
+            android:id="@+id/situpLayout">
 
-        <ImageView
-            android:contentDescription="@string/jogging"
+            <ImageView
+                android:contentDescription="@string/pushup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/situps"
+                android:id="@+id/situpView"
+                android:adjustViewBounds="true"
+                android:maxHeight="130dp"
+                android:maxWidth="130dp"
+                android:scaleType="fitCenter"
+                />
+
+            <LinearLayout
+                android:id="@+id/situpLineLayout"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/default0"
+                    android:tag="caloryCounter"
+                    android:paddingEnd="2dp"
+                    android:id="@+id/arbeitSitup" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="situps"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/androidxx"
-            android:id="@+id/joggingView"
-            android:layout_below="@+id/pushupView"
-            android:layout_alignEnd="@+id/pushupView"
-            android:paddingTop="10dp"
-            />
+            android:layout_below="@+id/pushupLayout"
+            android:layout_alignEnd="@+id/pushupLayout"
+            android:id="@+id/joggingLayout">
 
-        <ImageView
-            android:contentDescription="@string/jumping_jacks"
+            <ImageView
+                android:contentDescription="@string/jogging"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/jogging"
+                android:id="@+id/joggingView"
+                android:adjustViewBounds="true"
+                android:maxHeight="130dp"
+                android:maxWidth="130dp"
+                android:scaleType="fitCenter"
+                />
+
+            <LinearLayout
+                android:id="@+id/joggingLineLayout"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/default0"
+                    android:tag="caloryCounter"
+                    android:paddingEnd="2dp"
+                    android:id="@+id/arbeitJogging" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="minutes of jogging"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/androidxx"
-            android:id="@+id/jumping_jacksView"
-            android:layout_alignBottom="@id/joggingView"
-            android:layout_alignStart="@+id/situpView" />
+            android:layout_alignBottom="@id/joggingLayout"
+            android:layout_alignEnd="@+id/situpLayout"
+            android:id="@+id/jumping_jacksLayout">
+
+            <ImageView
+                android:contentDescription="@string/jumping_jacks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/jumpingjacks"
+                android:id="@+id/jumping_jacksView"
+                android:adjustViewBounds="true"
+                android:maxHeight="130dp"
+                android:maxWidth="150dp"
+                android:scaleType="fitCenter"
+                android:layout_gravity="end"
+                />
+
+            <LinearLayout
+                android:id="@+id/jumping_jacksLineLayout"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/default0"
+                    android:paddingEnd="2dp"
+                    android:id="@+id/arbeitJumpingJacks" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="minutes of jumping jacks"
+                    android:lines="1"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
 
 
     </RelativeLayout>
@@ -187,7 +331,7 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
             android:id="@+id/horizontalScrollView"
-            android:background="@color/grey"
+            android:background="@color/white"
             >
 
             <LinearLayout
@@ -205,7 +349,7 @@
                         android:tag="@string/pushup"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/pullups"
+                        android:src="@drawable/pushups"
                         android:onClick="changeExercise"
                         android:adjustViewBounds="true"
                         android:maxHeight="100dp"

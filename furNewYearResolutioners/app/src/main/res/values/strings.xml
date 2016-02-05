@@ -14,9 +14,12 @@
     <string name="jogging">Jogging</string>
     <string name="swimming">Swimming</string>
     <string name="stair_climbing">Stair-Climbing</string>
-    <string name="hintAmount">Amount</string>
+    <string name="hintAmount">this many</string>
     <string name="of">of</string>
     <string name="reps">reps</string>
     <string name="minutes">minutes</string>
+    <string name="default0">0</string>
+    <string name="empty"></string>
     <color name="grey">#EEEEEE</color>
+    <color name="white">#FFFFFF</color>
 </resources>

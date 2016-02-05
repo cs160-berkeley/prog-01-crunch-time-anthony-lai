@@ -50,13 +50,13 @@ public class MainActivity extends AppCompatActivity {
         System.out.println(currentExercise);
         sideways = (LinearLayout) ((LinearLayout) view.getParent()).getParent();
         children = sideways.getChildCount();
-        for (int i=0; i<children; i++) {
-            LinearLayout vertical = (LinearLayout) sideways.getChildAt(i);
-            vertical.getChildAt(0).setBackgroundColor(Color.rgb(238, 238, 238));
-        }
-        view.setBackgroundColor(Color.YELLOW);
+//        for (int i=0; i<children; i++) {
+//            LinearLayout vertical = (LinearLayout) sideways.getChildAt(i);
+//            vertical.getChildAt(0).setBackgroundColor(Color.rgb(238, 238, 238));
+//        }
+//        view.setBackgroundColor(Color.YELLOW);
         TextView ending = (TextView) findViewById(R.id.ending);
-        ending.setText((String) view.getTag());
+        ending.setText(((String) view.getTag()).toLowerCase());
         analyzeReps();
     }
 
@@ -70,8 +70,18 @@ public class MainActivity extends AppCompatActivity {
         Calories = amount * 100 / tagExerciseToReps.get(currentExercise);
         TextView arbeit = (TextView) findViewById(R.id.arbeit);
         arbeit.setText(String.valueOf(Calories));
-
-        //display in secondaries
+        TextView pushupArbeit = (TextView) findViewById(R.id.arbeitPushup);
+        TextView situpArbeit = (TextView) findViewById(R.id.arbeitSitup);
+        TextView joggingArbeit = (TextView) findViewById(R.id.arbeitJogging);
+        TextView jjacksArbeit = (TextView) findViewById(R.id.arbeitJumpingJacks);
+        int pushValue = Calories * tagExerciseToReps.get(Exercise.PUSHUP) / 100;
+        int sitValue = Calories * tagExerciseToReps.get(Exercise.SITUP) / 100;
+        int jogValue = Calories * tagExerciseToReps.get(Exercise.JOGGING) / 100;
+        int jackValue = Calories * tagExerciseToReps.get(Exercise.JUMPINGJACKS) / 100;
+        pushupArbeit.setText(String.valueOf(pushValue));
+        situpArbeit.setText(String.valueOf(sitValue));
+        joggingArbeit.setText(String.valueOf(jogValue));
+        jjacksArbeit.setText(String.valueOf(jackValue));
     }
 
     private enum Exercise {
@@ -106,18 +116,18 @@ public class MainActivity extends AppCompatActivity {
         tagExerciseToReps.put(Exercise.SWIMMING, 13);
         tagExerciseToReps.put(Exercise.STAIRCLIMBING, 15);
 
-        tagExerciseToMetric.put(Exercise.PUSHUP, "reps");
-        tagExerciseToMetric.put(Exercise.SITUP, "reps");
-        tagExerciseToMetric.put(Exercise.SQUATS, "reps");
-        tagExerciseToMetric.put(Exercise.LEGLIFT, "minutes");
-        tagExerciseToMetric.put(Exercise.PLANK, "minutes");
-        tagExerciseToMetric.put(Exercise.JUMPINGJACKS, "minutes");
-        tagExerciseToMetric.put(Exercise.PULLUP, "reps");
-        tagExerciseToMetric.put(Exercise.CYCLING, "minutes");
-        tagExerciseToMetric.put(Exercise.WALKING, "minutes");
-        tagExerciseToMetric.put(Exercise.JOGGING, "minutes");
-        tagExerciseToMetric.put(Exercise.SWIMMING, "minutes");
-        tagExerciseToMetric.put(Exercise.STAIRCLIMBING, "minutes");
+        tagExerciseToMetric.put(Exercise.PUSHUP, "");
+        tagExerciseToMetric.put(Exercise.SITUP, "");
+        tagExerciseToMetric.put(Exercise.SQUATS, "");
+        tagExerciseToMetric.put(Exercise.LEGLIFT, "minutes of");
+        tagExerciseToMetric.put(Exercise.PLANK, "minutes of");
+        tagExerciseToMetric.put(Exercise.JUMPINGJACKS, "minutes of");
+        tagExerciseToMetric.put(Exercise.PULLUP, "");
+        tagExerciseToMetric.put(Exercise.CYCLING, "minutes of");
+        tagExerciseToMetric.put(Exercise.WALKING, "minutes of");
+        tagExerciseToMetric.put(Exercise.JOGGING, "minutes of");
+        tagExerciseToMetric.put(Exercise.SWIMMING, "minutes of");
+        tagExerciseToMetric.put(Exercise.STAIRCLIMBING, "minutes of");
     }
 
     private EditText amountBox;
