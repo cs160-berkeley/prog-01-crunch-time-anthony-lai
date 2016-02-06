@@ -12,6 +12,7 @@ See [FürNewYearsResolutioners Demo] (https://youtu.be/uR-ndPqkMYY)
 
 ## Screenshots
 
+<img src="screenshots/basic.png" height="400" alt="Screenshot"/>
 <img src="screenshots/main.png" height="400" alt="Screenshot"/>
 
 ## Acknowledgments
