@@ -150,15 +150,15 @@ public class MainActivity extends AppCompatActivity {
         tagExerciseToMetric.put(Exercise.PUSHUP, "");
         tagExerciseToMetric.put(Exercise.SITUP, "");
         tagExerciseToMetric.put(Exercise.SQUATS, "");
-        tagExerciseToMetric.put(Exercise.LEGLIFT, "minutes of");
-        tagExerciseToMetric.put(Exercise.PLANK, "minutes of");
-        tagExerciseToMetric.put(Exercise.JUMPINGJACKS, "minutes of");
+        tagExerciseToMetric.put(Exercise.LEGLIFT, "minutes of ");
+        tagExerciseToMetric.put(Exercise.PLANK, "minutes of ");
+        tagExerciseToMetric.put(Exercise.JUMPINGJACKS, "minutes of ");
         tagExerciseToMetric.put(Exercise.PULLUP, "");
-        tagExerciseToMetric.put(Exercise.CYCLING, "minutes of");
-        tagExerciseToMetric.put(Exercise.WALKING, "minutes of");
-        tagExerciseToMetric.put(Exercise.JOGGING, "minutes of");
-        tagExerciseToMetric.put(Exercise.SWIMMING, "minutes of");
-        tagExerciseToMetric.put(Exercise.STAIRCLIMBING, "minutes of");
+        tagExerciseToMetric.put(Exercise.CYCLING, "minutes of ");
+        tagExerciseToMetric.put(Exercise.WALKING, "minutes of ");
+        tagExerciseToMetric.put(Exercise.JOGGING, "minutes of ");
+        tagExerciseToMetric.put(Exercise.SWIMMING, "minutes of ");
+        tagExerciseToMetric.put(Exercise.STAIRCLIMBING, "minutes of ");
     }
 
     private EditText amountBox;

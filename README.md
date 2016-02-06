@@ -8,13 +8,15 @@ Anthony Lai ([a.lai@berkeley.edu](mailto:a.lai@berkeley.edu))
 
 ## Demo Video
 
-See [your demo video title here] (https://link_to_your_video)
+See [FürNewYearsResolutioners Demo] (https://youtu.be/uR-ndPqkMYY)
 
 ## Screenshots
 
 <img src="screenshots/main.png" height="400" alt="Screenshot"/>
 
 ## Acknowledgments
+
+SIR Artwork is a great artist
 
 * Hat tip to anyone who's code was used
 * Any other support

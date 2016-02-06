@@ -19,6 +19,15 @@
     <string name="minutes">minutes</string>
     <string name="default0">0</string>
     <string name="empty"></string>
+    <string name="did">I did</string>
+    <string name="isequal">That\'s equal to</string>
+    <string name="caloricOr">calories! Or:</string>
+    <string name="lpushup">pushups</string>
+    <string name="lsitup">situps</string>
+    <string name="ljogging">minutes of jogging</string>
+    <string name="ljumping_jacks">minutes of jumping jacks</string>
+
+
     <color name="grey">#EEEEEE</color>
     <color name="white">#FFFFFF</color>
 </resources>
